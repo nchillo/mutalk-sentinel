@@ -4,7 +4,7 @@ A MutalkResultLoaderTest is a test class for testing the behavior of MutalkResul
 Class {
 	#name : #MutalkResultLoaderTest,
 	#superclass : #TestCase,
-	#category : #'Mutalk-Sentinel-Tests-Model'
+	#category : #'Mutalk-Sentinel-Tests'
 }
 
 { #category : #tests }

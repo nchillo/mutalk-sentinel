@@ -13,8 +13,7 @@ BaselineOfMutalkSentinel >> baseline: spec [
 		do: [ self
 				setUpDependencies: spec;
 				baselineMutalkSentinelApp: spec.
-			spec group: 'Development' with: 'Deployment'
-			]
+			spec group: 'Development' with: #('Tests' 'Deployment')]
 ]
 
 { #category : #baselines }
@@ -23,7 +22,11 @@ BaselineOfMutalkSentinel >> baselineMutalkSentinelApp: spec [
 	spec
 		package: 'Mutalk-Sentinel'
 			with: [ spec requires: #('Willow-Bootstrap-Deployment' 'Willow-SpinKit-Deployment') ];
-		group: 'Deployment' with: 'Mutalk-Sentinel'
+		group: 'Deployment' with: 'Mutalk-Sentinel'.
+	spec
+		package: 'Mutalk-Sentinel-Tests' with: [ spec requires: #('Mutalk-Sentinel') ];
+		group: 'Tests' with: 'Mutalk-Sentinel-Tests'.
+	spec group: 'default' with: #('Mutalk-Sentinel' 'Mutalk-Sentinel-Tests')
 ]
 
 { #category : #baselines }
