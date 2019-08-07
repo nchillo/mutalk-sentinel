@@ -6,15 +6,15 @@
     <a href="docs/"><strong>Explore the docs »</strong></a>
     <br>
     <br>
-    <a href="https://github.com/ba-st/mutalk-sentinel/issues/new?labels=Type%3A+Defect">Report a defect</a>
+    <a href="https://github.com/nchillo/mutalk-sentinel/issues/new?labels=Type%3A+Defect">Report a defect</a>
     |
-    <a href="https://github.com/ba-st/mutalk-sentinel/issues/new?labels=Type%3A+Feature">Request feature</a>
+    <a href="https://github.com/nchillo/mutalk-sentinel/issues/new?labels=Type%3A+Feature">Request feature</a>
   </p>
 </p>
 
-[![GitHub release](https://img.shields.io/github/release/ba-st/mutalk-sentinel.svg)](https://github.com/ba-st/mutalk-sentinel/releases/latest)
-[![Build Status](https://travis-ci.com/ba-st/mutalk-sentinel.svg?branch=release-candidate)](https://travis-ci.com/ba-st/mutalk-sentinel)
-[![Coverage Status](https://coveralls.io/repos/github/ba-st/mutalk-sentinel/badge.svg?branch=release-candidate)](https://coveralls.io/github/ba-st/mutalk-sentinel?branch=release-candidate)
+[![GitHub release](https://img.shields.io/github/release/nchillo/mutalk-sentinel.svg)](https://github.com/nchillo/mutalk-sentinel/releases/latest)
+[![Build Status](https://travis-ci.com/nchillo/mutalk-sentinel.svg?branch=release-candidate)](https://travis-ci.com/nchillo/mutalk-sentinel)
+[![Coverage Status](https://coveralls.io/repos/github/nchillo/mutalk-sentinel/badge.svg?branch=release-candidate)](https://coveralls.io/github/nchillo/mutalk-sentinel?branch=release-candidate)
 
 Why would I care about this thing? When to use it? For whom is it designed? When not to use it?
 
@@ -26,7 +26,7 @@ Why would I care about this thing? When to use it? For whom is it designed? When
 ## Quick Start
 
 - Download the latest [Pharo 32](https://get.pharo.org/) or [64 bits VM](https://get.pharo.org/64/).
-- Download a ready to use image from the [release page](https://github.com/ba-st/mutalk-sentinel/releases/latest)
+- Download a ready to use image from the [release page](https://github.com/nchillo/mutalk-sentinel/releases/latest)
 - Explore the [documentation](docs/)
 
 ## Installation
