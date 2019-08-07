@@ -13,7 +13,10 @@ BaselineOfMutalkSentinel >> baseline: spec [
 		do: [ self
 				setUpDependencies: spec;
 				baselineMutalkSentinelApp: spec.
-			spec group: 'Development' with: #('Tests' 'Deployment')]
+			spec
+				group: 'Development' with: #('Tests' 'Deployment');
+				group: 'CI' with: #('Tests')
+			]
 ]
 
 { #category : #baselines }
