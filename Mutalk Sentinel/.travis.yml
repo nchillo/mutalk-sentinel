@@ -1,0 +1,21 @@
+language: smalltalk
+sudo: false
+os:
+- linux
+smalltalk:
+- Pharo64-7.0
+- Pharo32-7.0
+- Pharo32-6.1
+before_deploy:
+  - cp "${SMALLTALK_CI_IMAGE}" "Mutalk Sentinel.image"
+  - cp "${SMALLTALK_CI_CHANGES}" "Mutalk Sentinel.changes"
+  - zip -q "${TRAVIS_BRANCH}-${TRAVIS_SMALLTALK_VERSION}.zip" "Mutalk Sentinel.image" "Mutalk Sentinel.changes"
+deploy:
+  provider: releases
+  api_key:
+    secure: XXX (Use travis setup releases to configure it)
+  file: "${TRAVIS_BRANCH}-${TRAVIS_SMALLTALK_VERSION}.zip"
+  skip_cleanup: true
+  on:
+    repo: ba-st/mutalk-sentinel
+    tags: true
