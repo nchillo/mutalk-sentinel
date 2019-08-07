@@ -1,7 +1,7 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'mutalksentinel',
+      #baseline : 'MutalkSentinel',
       #directory : 'source',
       #load : [ 'CI' ],
       #platforms : [  #pharo ]
