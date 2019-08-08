@@ -1,7 +1,7 @@
 Class {
 	#name : #MutalkSentinelWebView,
 	#superclass : #Object,
-	#category : #'Mutalk-Sentinel-Webviews'
+	#category : #'Mutalk-Sentinel-Views'
 }
 
 { #category : #rendering }

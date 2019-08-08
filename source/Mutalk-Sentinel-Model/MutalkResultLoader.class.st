@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'parsedObject'
 	],
-	#category : #'Mutalk-Sentinel-Model'
+	#category : #'Mutalk-Sentinel-Model-Mutalk-Sentinel-Model'
 }
 
 { #category : #'instance creation' }

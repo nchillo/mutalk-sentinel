@@ -23,13 +23,15 @@ BaselineOfMutalkSentinel >> baseline: spec [
 BaselineOfMutalkSentinel >> baselineMutalkSentinelApp: spec [
 
 	spec
-		package: 'Mutalk-Sentinel'
-			with: [ spec requires: #('Willow-Bootstrap-Deployment' 'Willow-SpinKit-Deployment' 'NeoJSON') ];
-		group: 'Deployment' with: 'Mutalk-Sentinel'.
+		package: 'Mutalk-Sentinel-Model'
+			with: [ spec requires: #('NeoJSON') ];
+		package: 'Mutalk-Sentinel-Views'
+			with: [ spec requires: #('Willow-Bootstrap-Deployment' 'Willow-SpinKit-Deployment' 'Mutalk-Sentinel-Model') ];
+		group: 'Deployment' with: #('Mutalk-Sentinel-Model' 'Mutalk-Sentinel-Views').
 	spec
-		package: 'Mutalk-Sentinel-Tests' with: [ spec requires: #('Mutalk-Sentinel') ];
-		group: 'Tests' with: 'Mutalk-Sentinel-Tests'.
-	spec group: 'default' with: #('Mutalk-Sentinel' 'Mutalk-Sentinel-Tests')
+		package: 'Mutalk-Sentinel-Model-Tests' with: [ spec requires: #('Mutalk-Sentinel-Model') ];
+		group: 'Tests' with: 'Mutalk-Sentinel-Model-Tests'.
+	spec group: 'default' with: #('Mutalk-Sentinel-Views' 'Mutalk-Sentinel-Model-Tests')
 ]
 
 { #category : #baselines }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'applicationContext'
 	],
-	#category : #'Mutalk-Sentinel-Application'
+	#category : #'Mutalk-Sentinel-Views'
 }
 
 { #category : #accessing }
