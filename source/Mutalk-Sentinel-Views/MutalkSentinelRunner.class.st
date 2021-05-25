@@ -28,11 +28,15 @@ MutalkSentinelRunner class >> sessionClass [
 { #category : #accessing }
 MutalkSentinelRunner >> componentSupplierForApplication [
 
-	^ BootstrapComponentSupplier
-		withBootstrapLibrary: (self deploymentMode libraryFor: Bootstrap3MetadataLibrary) withoutOptionalTheme
-		selectLibrary: ((self deploymentMode libraryFor: BootstrapSelectLibrary) using: self language)
-		datepickerLibrary: ((self deploymentMode libraryFor: BootstrapDatepickerLibrary) using: self language)
-		typeaheadLibrary: (self deploymentMode libraryFor: BootstrapTypeaheadLibrary) default
+	^ Bootstrap4ComponentSupplier
+		usingLibraries:
+			{(self deploymentMode libraryFor: Bootstrap4MetadataLibrary)
+				withoutBundledDependencies.
+			(self deploymentMode libraryFor: BootstrapSelectLibrary)
+				using: self language.
+			(self deploymentMode libraryFor: BootstrapDatepickerLibrary)
+				using: self language.
+			(self deploymentMode libraryFor: BootstrapTypeaheadLibrary) default}
 ]
 
 { #category : #accessing }
@@ -70,7 +74,7 @@ MutalkSentinelRunner >> initializeContainerView [
 				"addContent: (self toolbarRenderingOnAction: testResult);
 				addContent: MutalkRunnerSuiteSelectionWebView new;"
 				build)
-		applying: [ :div | div addClass bootstrap container ]
+		applying: [ :div | div addClass bootstrap4 container ]
 ]
 
 { #category : #accessing }
