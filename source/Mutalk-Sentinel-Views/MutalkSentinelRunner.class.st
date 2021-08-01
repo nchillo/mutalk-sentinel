@@ -64,12 +64,14 @@ MutalkSentinelRunner >> initializeContainerView [
 
 	| testResult |
 
-	testResult := IdentifiedWebView forDivNamed: 'test-result' containing: MutalkSentinelWebView new.
-	contentView := GenericContainerWebView
-		wrapping:
+	testResult := self componentSupplier 
+		divisionContainerWrapping: [ :canvas | canvas render: MutalkSentinelWebView new  ]
+		applying: [  ].
+	contentView := self componentSupplier
+		divisionContainerWrapping:
 			(self componentSupplier gridBuilder
 				columnsPerRow: 1;
-				addContent: (HeadingWebView displaying: 'Mutalk Runner' withLevel: 1);
+				addContent: (HeadingWebView displaying: 'Mutalk Sentinel' withLevel: 1);
 				addContent: testResult;
 				"addContent: (self toolbarRenderingOnAction: testResult);
 				addContent: MutalkRunnerSuiteSelectionWebView new;"
